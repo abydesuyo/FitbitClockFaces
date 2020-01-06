@@ -1,0 +1,26 @@
+{
+  "fitbit": {
+    "appUUID": "282b16a2-7ae9-4768-a0a0-567932dfa207",
+    "appType": "clockface",
+    "appDisplayName": "FluffyDigiClock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#9c27b0",
+    "requestedPermissions": [
+      "access_activity"
+    ],
+    "buildTargets": [
+      "mira",
+      "meson",
+      "gemini"
+    ],
+    "i18n": {
+      "en": {
+        "name": "FluffyDigiClock"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}
