@@ -1,9 +1,11 @@
 <svg id="background">
   <image href="myimage.jpg" />
   <text id="myLabel"></text>
-  <text id="myStepStats"></text>
-  <text id="myDistStats"></text>
-  <text id="myActStats"></text>
+  <text id="steps"></text>
+  <text id="elevationGain"></text>
+  <text id="distance"></text>
+  <text id="activeMinutes"></text>
+  <text id="battery"></text>
   <rect id="calories" x="30%" y="85%" width="0%" height="2%" fill="fb-white" />
   <rect id="distance" x="30%" y="80%" width="0%" height="2%" fill="fb-white" />
   <rect id="steps" x="30%" y="90%" width="0%" height="2%" fill="fb-white" />  

@@ -12,33 +12,53 @@
   fill: magenta;
 }
 
-#myStepStats {
+#steps {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 40;
+  text-anchor: middle;
+  x: 50%;
+  y: 65%;
+  fill: magenta;
+}
+
+#elevationGain {
   font-size: 25;
   font-family: System-Bold;
   text-length: 40;
   text-anchor: middle;
   x: 50%;
   y: 75%;
-  fill: blue;
+  fill: magenta;
 }
 
-#myDistStats {
+#distance {
   font-size: 25;
   font-family: System-Bold;
   text-length: 40;
   text-anchor: middle;
   x: 50%;
   y: 85%;
-  fill: darkred;
+  fill: magenta;
 }
 
-#myActStats {
+#activeMinutes {
   font-size: 25;
   font-family: System-Bold;
   text-length: 40;
   text-anchor: middle;
   x: 50%;
   y: 95%;
+  fill: magenta;
+}
+
+
+#battery {
+  font-size: 12;
+  font-family: System-Bold;
+  text-length: 20;
+  x: 90%;
+  y: 5%;
   fill: magenta;
 }
 
