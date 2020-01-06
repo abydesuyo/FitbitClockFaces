@@ -1,0 +1,10 @@
+.background {
+  viewport-fill: black;
+}
+
+
+text {
+  text-length: 1000;
+  font-family: Colfax-Light;
+  fill: white;
+}

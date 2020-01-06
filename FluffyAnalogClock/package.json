@@ -1,0 +1,24 @@
+{
+  "fitbit": {
+    "appUUID": "648ae036-5a09-4d2b-8a99-3c5f9e5d134f",
+    "appType": "clockface",
+    "appDisplayName": "FluffyAnalogClock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson",
+      "gemini",
+      "mira"
+    ],
+    "i18n": {
+      "en": {
+        "name": "FluffyAnalogClock"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}
