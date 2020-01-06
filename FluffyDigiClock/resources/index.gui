@@ -1,6 +1,6 @@
 <svg id="background">
-  <image href="myimage.jpg" />
-  <text id="myLabel"></text>
+  <image href="backgroundimage.jpg" />
+  <text id="timeDisplay"></text>
   <text id="steps"></text>
   <text id="elevationGain"></text>
   <text id="distance"></text>

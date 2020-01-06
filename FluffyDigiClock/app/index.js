@@ -12,7 +12,7 @@ import * as util from "../common/utils";
 clock.granularity = "minutes";
 
 // Get a handle on the <text> element
-const myLabel = document.getElementById("myLabel");
+const timeDisplay = document.getElementById("timeDisplay");
 // const myStepStats = document.getElementById("myStepStats");
 // const myStairStats = document.getElementById("myStairStats");
 // const myDistStats = document.getElementById("myDistStats");
@@ -41,7 +41,7 @@ clock.ontick = (evt) => {
     hours = util.zeroPad(hours);
   }
   let mins = util.zeroPad(now.getMinutes());
-  myLabel.text = `${hours}:${mins}`;
+  timeDisplay.text = `${hours}:${mins}`;
   displayHorizontalStat('steps','Steps');
   displayHorizontalStat('elevationGain','Stairs');
   displayHorizontalStat('activeMinutes','Active');
@@ -79,30 +79,25 @@ function displayHorizontalStat(sTodayStat, displayText)
 
 function colourScheme(el, iPercentage)
 {
-
-  if (iPercentage > 100)
+  if (iPercentage >= 100)
   {
     el.style.fill = "fb-mint";
   }
+  else if (iPercentage >= 80)
+  {
+    el.style.fill = "fb-cyan";
+  }
+  else if (iPercentage >= 50)
+  {
+    el.style.fill = "fb-green";
+  }
+  else if (iPercentage >= 30)
+  {
+    el.style.fill = "fb-orange";
+  }
   else
   {
-    let iPercentDiff = 100 - iPercentage;
-    if (iPercentDiff < 20)
-    {
-      el.style.fill = "fb-cyan";
-    }
-    else if (iPercentDiff < 50)
-    {
-      el.style.fill = "fb-yellow";
-    }
-    else if (iPercentDiff < 70)
-    {
-      el.style.fill = "fb-orange";
-    }
-    else
-    {
-      el.style.fill = "fb-red";
-    }
+    el.style.fill = "fb-red";
   }
 }
 
