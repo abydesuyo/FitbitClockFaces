@@ -1,0 +1,33 @@
+.background {
+  viewport-fill: black;
+}
+
+#mainClock {
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 35;
+  text-anchor: middle;
+  x: 42%;
+  y: 20%+40;
+  fill: red;
+}
+
+#secondsClock {
+  font-size: 40;
+  font-family: System-Bold;
+  text-length: 35;
+  text-anchor: middle;
+  x: 85%;
+  y: 20%+40;
+  fill: red;
+}
+
+#dateDisplay {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 60;
+  text-anchor: middle;
+  x: 50%;
+  y: 35%+40;
+  fill: orange;
+}

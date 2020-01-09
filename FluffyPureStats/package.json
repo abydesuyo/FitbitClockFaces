@@ -1,0 +1,25 @@
+{
+  "fitbit": {
+    "appUUID": "1fa1b6a3-de9d-4a43-a076-e68a58375fef",
+    "appType": "clockface",
+    "appDisplayName": "FluffyPureStats",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "higgs",
+      "meson",
+      "gemini",
+      "mira"
+    ],
+    "i18n": {
+      "en": {
+        "name": "FluffyPureStats"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}

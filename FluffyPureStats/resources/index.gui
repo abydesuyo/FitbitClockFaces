@@ -1,0 +1,5 @@
+<svg class="background">
+  <text id="mainClock" />
+  <text id="secondsClock" />
+  <text id="dateDisplay" />
+</svg>
