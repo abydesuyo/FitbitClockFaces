@@ -2,4 +2,18 @@
   <text id="mainClock" />
   <text id="secondsClock" />
   <text id="dateDisplay" />
+  <rect id="bgbar" y="61%" />
+  <rect id="bgbar" y="71%" />
+  <rect id="bgbar" y="81%" />
+  <rect id="bgbar" y="91%" />
+  <text id="stepsDisplay" >steps</text>
+  <rect id="steps" /> 
+  <text id="elevationGainDisplay">floors</text>
+  <rect id="elevationGain"/>
+  <text id="distanceDisplay">distance</text>
+  <rect id="distance"/>
+  <text id="activeMinutesDisplay">active</text>
+  <rect id="activeMinutes"/>
+  <rect id="battery" />
+  <text id="batteryStats" />
 </svg>

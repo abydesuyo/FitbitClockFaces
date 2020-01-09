@@ -31,3 +31,125 @@
   y: 35%+40;
   fill: orange;
 }
+
+#battery {
+  font-size: 12;
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x: 88%;
+  rx:3;
+  y: 5%;
+  ry:3;
+  width: 11%;
+  height: 5%;
+  stroke:white;
+  stroke-width:50;
+  fill: fb-white;
+}
+
+#batteryStats {
+  font-size: 12;
+  font-family: System-Bold;
+  text-length: 20;
+  x: 90%;
+  y: 9%;
+  fill:fb-white;
+}
+
+
+#stepsDisplay {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 15;
+  text-anchor: start;
+  x: 8%;
+  y: 65%;
+  fill: magenta;
+}
+
+#steps {
+/*   font-size: 25; */
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x: 40%;
+  y: 61%;
+  width: 1%;
+  height: 3%;
+  fill: fb-white;
+}
+
+#elevationGainDisplay {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 15;
+  text-anchor: start;
+  x: 8%;
+  y: 75%;
+  fill: magenta;
+}
+
+#elevationGain {
+/*   font-size: 25; */
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x: 40%;
+  y: 71%;
+  width: 1%;
+  height: 3%;
+  fill: fb-white;
+}
+
+#distanceDisplay {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 15;
+  text-anchor: start;
+  x: 8%;
+  y: 85%;
+  fill: magenta;
+}
+
+#distance {
+/*   font-size: 25; */
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x: 40%;
+  y: 81%;
+  width: 1%;
+  height: 3%;
+  fill: fb-white;
+}
+
+
+
+#activeMinutesDisplay {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 15;
+  text-anchor: start;
+  x: 8%;
+  y: 95%;
+  fill: magenta;
+}
+
+#activeMinutes {
+/*   font-size: 25; */
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x: 40%;
+  y: 91%;
+  width: 1%;
+  height: 3%;
+  fill: fb-white;
+}
+
+#bgbar {
+/*   font-size: 25; */
+  font-family: System-Bold;
+/*   text-length: 20; */
+  x:40%;
+  width: 50%;
+  height: 3%;
+  fill: fb-white;
+}
+

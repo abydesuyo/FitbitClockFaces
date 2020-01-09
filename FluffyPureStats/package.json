@@ -5,9 +5,10 @@
     "appDisplayName": "FluffyPureStats",
     "iconFile": "resources/icon.png",
     "wipeColor": "",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_activity"
+    ],
     "buildTargets": [
-      "higgs",
       "meson",
       "gemini",
       "mira"
