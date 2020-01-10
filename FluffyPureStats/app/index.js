@@ -51,14 +51,19 @@ function displayHorizontalStat(sTodayStat)
   let iStat = (today.local[sTodayStat] || 0);
   let iGoal = (goals[sTodayStat] || 0);
   let iPercent = Math.floor(iStat/iGoal*100);
+  let maxwidth = 150;
 
   var el = document.getElementById(sTodayStat);
 
-  let widthtoSet = Math.floor(iPercent/100 * 150);
-  if (widthtoSet < 150)
+  let widthtoSet = Math.floor(iPercent/100 * maxwidth);
+  if (widthtoSet < maxwidth)
     {
       el.width = widthtoSet;      
     }
+ else
+   {
+     el.width = maxwidth;
+   }
   colourScheme(el, iPercent);
 }
 
