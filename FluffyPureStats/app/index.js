@@ -4,6 +4,7 @@ import { preferences } from "user-settings";
 import { today } from "user-activity";
 import { goals } from "user-activity";
 import { battery } from "power";
+import { HeartRateSensor } from "heart-rate";
 import * as util from "../common/utils";
 
 // Update the clock every seconds
@@ -13,8 +14,8 @@ clock.granularity = "seconds";
 const mainClock = document.getElementById("mainClock");
 const secondsClock = document.getElementById("secondsClock");
 const dateDisplay = document.getElementById("dateDisplay");
-
-
+const hrm = new HeartRateSensor();
+hrm.start();
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
@@ -41,8 +42,10 @@ clock.ontick = (evt) => {
   displayBattery();
   displayHorizontalStat('steps');
   displayHorizontalStat('elevationGain');
-  displayHorizontalStat('distance');
+  // displayHorizontalStat('distance'); // Disable Distance on user request and replaced that with Calories
+  displayHorizontalStat('calories');
   displayHorizontalStat('activeMinutes');
+  displayHeartRate();
 }
 
 
@@ -75,11 +78,11 @@ function colourScheme(el, iPercentage)
   }
   else if (iPercentage >= 80)
   {
-    el.style.fill = "fb-cyan";
+    el.style.fill = "fb-green";
   }
   else if (iPercentage >= 50)
   {
-    el.style.fill = "fb-green";
+    el.style.fill = "fb-cyan";
   }
   else if (iPercentage >= 30)
   {
@@ -98,4 +101,14 @@ function displayBattery()
   var elstat = document.getElementById('batteryStats');
   colourScheme(el, batterystats);
   elstat.text = `${batterystats}%`;
+}
+
+
+function displayHeartRate()
+{
+  let hrstats = (hrm['heartRate'] || '--');
+  var el = document.getElementById('heartRate');
+  // var elstat = document.getElementById('batteryStats');
+  // colourScheme(el, batterystats);
+  el.text = `${hrstats}`;
 }

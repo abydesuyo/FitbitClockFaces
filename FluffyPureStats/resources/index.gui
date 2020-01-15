@@ -10,10 +10,14 @@
   <rect id="steps" /> 
   <text id="elevationGainDisplay">floors</text>
   <rect id="elevationGain"/>
-  <text id="distanceDisplay">distance</text>
-  <rect id="distance"/>
+<!--   <text id="distanceDisplay">distance</text>
+  <rect id="distance"/> -->
+  <text id="caloriesDisplay">calories</text>
+  <rect id="calories"/>
   <text id="activeMinutesDisplay">active</text>
   <rect id="activeMinutes"/>
   <rect id="battery" />
   <text id="batteryStats" />
+  <text id="heartRate" />  
+  <image id="heartRateDisplay" href="heartRate-small.jpg" />
 </svg>
