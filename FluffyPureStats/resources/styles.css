@@ -174,7 +174,7 @@
 }
 
 #heartRate {
-  x:10;
+  x:40;
   y:25;
   font-size: 24;
   font-family: System-Bold;
@@ -182,8 +182,8 @@
 }
 
 #heartRateDisplay {
-  x:41;
-  y:9;
+  x:11;
+  y:10;
   width:20;
   height:15;
 }

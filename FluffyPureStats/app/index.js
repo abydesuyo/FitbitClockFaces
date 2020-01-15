@@ -107,8 +107,9 @@ function displayBattery()
 function displayHeartRate()
 {
   let hrstats = (hrm['heartRate'] || '--');
+  let hrpercent = Math.abs(100 - ((hrstats/150)*100));
   var el = document.getElementById('heartRate');
   // var elstat = document.getElementById('batteryStats');
-  // colourScheme(el, batterystats);
+  colourScheme(el, hrpercent);
   el.text = `${hrstats}`;
 }
