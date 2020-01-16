@@ -15,7 +15,10 @@ const mainClock = document.getElementById("mainClock");
 const secondsClock = document.getElementById("secondsClock");
 const dateDisplay = document.getElementById("dateDisplay");
 const hrm = new HeartRateSensor();
+
+hrm.addEventListener("reading", () => { displayHeartRate(); });
 hrm.start();
+
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
@@ -45,7 +48,6 @@ clock.ontick = (evt) => {
   // displayHorizontalStat('distance'); // Disable Distance on user request and replaced that with Calories
   displayHorizontalStat('calories');
   displayHorizontalStat('activeMinutes');
-  displayHeartRate();
 }
 
 
