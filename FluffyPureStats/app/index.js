@@ -5,23 +5,33 @@ import { today } from "user-activity";
 import { goals } from "user-activity";
 import { battery } from "power";
 import { HeartRateSensor } from "heart-rate";
+import { display } from "display";
 import * as util from "../common/utils";
 
 // Update the clock every seconds
 clock.granularity = "seconds";
 
-// Get a handle on the <text> element
+// Get a handle on the <text> elements
 const mainClock = document.getElementById("mainClock");
 const secondsClock = document.getElementById("secondsClock");
 const dateDisplay = document.getElementById("dateDisplay");
+// const hrm = new HeartRateSensor({ frequency: 1 });
 const hrm = new HeartRateSensor();
 
-hrm.addEventListener("reading", () => { displayHeartRate(); });
+hrm.onerror = function () { console.log(`restarting hrm after crash..`); hrm.start(); };
+hrm.onreading = function() { displayHeartRate(); };
 hrm.start();
 
+display.addEventListener("change", () => {
+  // Automatically stop the sensor when the screen is off to conserve battery
+  // console.log(hrm.heartRate);
+  display.on ? hrm.start() : hrm.stop();
+});
 
-// Update the <text> element every tick with the current time
+
+// Update the <text> elements every tick with the current time
 clock.ontick = (evt) => {
+  // hrm.start();
   let today = evt.date;
   let hours = today.getHours();
   if (preferences.clockDisplay === "12h") {
@@ -48,6 +58,8 @@ clock.ontick = (evt) => {
   // displayHorizontalStat('distance'); // Disable Distance on user request and replaced that with Calories
   displayHorizontalStat('calories');
   displayHorizontalStat('activeMinutes');
+  // displayHeartRate();
+  // hrm.stop();
 }
 
 
@@ -109,9 +121,11 @@ function displayBattery()
 function displayHeartRate()
 {
   let hrstats = (hrm['heartRate'] || '--');
+  // let hrstats = hrm.heartRate;
   let hrpercent = Math.abs(100 - ((hrstats/150)*100));
   var el = document.getElementById('heartRate');
   // var elstat = document.getElementById('batteryStats');
   colourScheme(el, hrpercent);
   el.text = `${hrstats}`;
+  // console.log(`function got called`);
 }
