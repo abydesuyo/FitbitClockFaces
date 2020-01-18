@@ -6,6 +6,7 @@ import { goals } from "user-activity";
 import { battery } from "power";
 import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
+import { user } from "user-profile";
 import * as util from "../common/utils";
 
 // Update the clock every seconds
@@ -108,6 +109,28 @@ function colourScheme(el, iPercentage)
   }
 }
 
+function hrColourScheme(el, hrValue)
+{
+  let hrz = user.heartRateZone(hrValue);
+  // console.log(`${hrz}`);
+  if (hrz == 'out-of-range' || hrz == 'below-custom')
+  {
+    el.style.fill = "fb-white";
+  }
+  else if (hrz == 'fat-burn' || hrz == 'custom')
+  {
+    el.style.fill = "fb-yellow";
+  }
+  else if (hrz == 'cardio' || hrz == 'above-custom')
+  {
+    el.style.fill = "fb-orange";
+  }
+  else if (hrz == 'peak' || hrz == 'above-custom')
+  {
+    el.style.fill = "fb-red";
+  }
+}
+
 function displayBattery()
 {
   let batterystats = (battery['chargeLevel'] || 0);
@@ -122,10 +145,11 @@ function displayHeartRate()
 {
   let hrstats = (hrm['heartRate'] || '--');
   // let hrstats = hrm.heartRate;
-  let hrpercent = Math.abs(100 - ((hrstats/150)*100));
+  // let hrpercent = Math.abs(100 - ((hrstats/150)*100));
   var el = document.getElementById('heartRate');
   // var elstat = document.getElementById('batteryStats');
-  colourScheme(el, hrpercent);
+  hrColourScheme(el, hrstats);
   el.text = `${hrstats}`;
   // console.log(`function got called`);
 }
+
